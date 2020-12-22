@@ -1,28 +1,41 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+		<HeaderApp />
+
+		<div>
+			<ToastMsg :msg="toastMsg" />
+
+			<router-view></router-view>
+		</div>
+
+		<FooterApp />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HeaderApp from "./components/HeaderApp";
+import FooterApp from "./components/FooterApp";
+import ToastMsg from "./components/ToastMsg";
+import { mapGetters } from "vuex";
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+	name: 'App',
+
+	components: {
+		HeaderApp,
+		FooterApp,
+		ToastMsg
+	},
+
+	computed: {
+		...mapGetters({
+			toastMsg: "toastMsg"
+		})
+	}
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import url("./assets/styles/custom.css");
+@import url("https://pro.fontawesome.com/releases/v5.10.0/css/all.css");
 </style>

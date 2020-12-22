@@ -1,0 +1,14 @@
+html, body {
+	height: 100% !important;
+}
+a {
+	text-decoration: none;
+	background-color: transparent;
+	transition: all .3s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+pre {
+	font-family: var(--bs-font-sans-serif) !important;
+	font-size: 1rem !important;
+	color: #788487;
+	white-space: pre-wrap;
+}
