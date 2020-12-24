@@ -9,7 +9,7 @@
 
 					<div v-if="currentUser.id === post.user._id" class="dropdown px-2">
 						<span class="tooltip-test" title="Options" type="button" :id="`dropdown_${post._id}`" data-bs-toggle="dropdown" aria-expanded="false">
-							<i class="fas fa-ellipsis-v"></i>
+							<i class="fas fa-ellipsis-v color-tertiary"></i>
 						</span>
 						<ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" :aria-labelledby="`dropdown_${post._id}`">
 							<li><a class="dropdown-item" href="#" @click.prevent="toggleModal">Edit</a></li>
@@ -67,10 +67,9 @@ export default {
 <style scoped>
 /* post */
 .post {
-	padding: 0 0 20px;
-	margin: 50px 0 30px;
-	border-bottom: 1px solid #f0f0f0;
+	border-bottom: 1px solid #045762;
 }
+.post-content,
 .post-header {
 	margin: 0 0 30px;
 }
@@ -79,13 +78,20 @@ export default {
 	font-size: 2rem;
 	margin-bottom: 8px;
 	color: #000;
-	text-transform: uppercase;
+	text-transform: capitalize;
+	margin: 0;
+}
+.post-content > pre {
+	color: #000;
 }
 .post-meta {
-	color: #a3a6a8;
+	color: gray;
 	font-size: 1rem;
 	padding: 0;
 	margin: 0;
+}
+.post-meta > small > a {
+  color: #045762;
 }
 .post-meta > small > a:hover {
   color: #000;
@@ -98,7 +104,7 @@ export default {
 	border-radius: 50%;
 }
 .fas:hover {
-	background-color: #f3f2f2;
+	background-color: #4e8d7c;
 }
 .dropdown-menu {
 	min-width: auto;

@@ -8,9 +8,9 @@
 
 				<div v-if="currentUser.id === post.user._id" class="dropdown px-2">
 					<span class="tooltip-test" title="Options" type="button" :id="`dropdown_${post._id}`" data-bs-toggle="dropdown" aria-expanded="false">
-						<i class="fas fa-ellipsis-v"></i>
+						<i class="fas fa-ellipsis-v color-tertiary"></i>
 					</span>
-					<ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" :aria-labelledby="`dropdown_${post._id}`">
+					<ul class="dropdown-menu dropdown-menu-end" :aria-labelledby="`dropdown_${post._id}`">
 						<li><a class="dropdown-item" href="#" @click="open">Edit</a></li>
 						<li><a class="dropdown-item" href="#" @click="deletePost">Delete</a></li>
 					</ul>
@@ -73,7 +73,7 @@ export default {
 
 <style scoped>
 .post-header {
-	margin: 0 0 30px;
+	margin: 0 0 20px;
 }
 .post-header .post-title > a {
 	font-weight: 700;
@@ -83,22 +83,24 @@ export default {
 	text-transform: capitalize;
 }
 .post-header .post-title > a:hover {
-	color: #a3a6a8;
+	color: #045762;
 }
 .post-meta {
 	font-size: 1rem;
 	padding: 0;
 	margin: 0;
+	color: gray;
 }
+.post-meta > small > a,
 .post-more > a {
-  color: #a3a6a8;
+  color: #045762;
 }
 .post-meta > small > a:hover,
 .post-more > a:hover {
   color: #000;
 }
 .post-content > p {
-	color: #788487;
+	color: rgb(20, 20, 20);
 }
 
 .flex {
@@ -127,6 +129,15 @@ export default {
 }
 .dropdown-menu {
 	min-width: auto;
+	border: 1px solid #045762;
+	background-color: #045762;
+}
+.dropdown-item {
+	color:  #f3f2f2;
+}
+.dropdown-item:hover,
+.dropdown-item:focus {
+	background-color: #4e8d7c;
 }
 
 /* Responsive layout - makes a one column layout instead of a two-column layout */

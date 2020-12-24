@@ -23,8 +23,8 @@ M.E.V.N stack is the idea of using Javascript/Node for fullstack web development
 *Most people use ReactJS (M.E.R.N) instead of VueJS, but I chose Vue, because why not?!*
 
 # M.E.V.N Frontend
-This is the Server-Side of the project M.E.V.N.
-***You may find the Client-Side [here](https://github.com/AbdelFit/M.E.V.N-Backend.git).***
+This is the Client-Side of the project M.E.V.N.
+***You may find the Server-Side [here](https://github.com/AbdelFit/M.E.V.N-Backend.git).***
 
 The project consists in giving the possibility to people to be able to first create an account and connect, and once they connect they can:
 - create posts, modify or delete them
@@ -48,27 +48,11 @@ src/
  main.js
  App.vue
  assets/
-  logo.png
-  styles/
-	 custom.css
  components/
-  ...
  helpers/
-  ...
  pages/
-  Home.vue
-  auth/
-	 ...
-	posts/
-	 ...
-	profile/
-	 ...
  router/
-	index.js
  store/
-  index.js
-	modules/
-	 ...
 ```
 
 # Prerequirement
@@ -113,13 +97,72 @@ Once everything is setup and installed, when you run "npm run serve", you should
 ![Compilation succefully](./public/images/pic1.png)
 
 ## Pages
+> All pages are responsive, they fit the width of every phone.
 
 ### - Home page
+Once we open the url "localhost:8080", we will see the home page with the Login form and some pictures.
+
+![Home page](./public/images/home.png)
+
+![Home page for mobile](./public/images/home-mobile.png)
 
 ### - SignUp page
+For new users, there is a sign-up page.
+
+![Signup page](./public/images/signup.png)
+
+![Signup page for mobile](./public/images/signup-mobile.png)
 
 ### - Posts page
+Once the user is authenticated, he will end up in the posts page where he can see all the posts.
+
+![Posts page](./public/images/posts.png)
+
+![Posts page for mobile](./public/images/posts-mobile.png)
+
+The user can add new posts, edit only his own post or delete them.
+
+![New post](./public/images/newPost.png)
+
+![New post for mobile](./public/images/newPost-mobile.png)
+
+![Edit post](./public/images/editPost.png)
+
+![Delete post](./public/images/deletePost.png)
+
+The user can also search for posts. ***He must enter 3 characters!***
+
+![Search post](./public/images/search.png)
+
+![Search post for mobile](./public/images/search-mobile.png)
 
 ### - One post page
+The authenticated user can click on any post to read it's whole text and comments.
+
+![Post page](./public/images/showPost.png)
+
+![Post page for mobile](./public/images/showPost-mobile.png)
+
+If the post belongs to the authenticated user, he can still edit it or delete it in this page. As well as he can add comments, edit them or delete them.
+
+![Edit comment](./public/images/editComment.png)
+
+![Edit comment for mobile](./public/images/editComment-mobile.png)
 
 ### - Profile page
+Every user can visit his own profile or the other user's profiles.
+In each profile he may see all the user's posts and comments, but for only his own profile he may also update his own informations, such as Username, Bio or change his password.
+
+![Profile page](./public/images/profile.png)
+
+![Profile page for mobile](./public/images/profile-mobile.png)
+
+![Profile comments](./public/images/profileComments.png)
+
+![Profile comments for mobile](./public/images/profileComments-mobile.png)
+
+![Profile edit](./public/images/profileEdit.png)
+
+![Profile edit open](./public/images/profileEdit2.png)
+
+![Profile edit for mobile](./public/images/profileEdit-mobile.png)

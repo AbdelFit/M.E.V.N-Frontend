@@ -1,6 +1,14 @@
 html, body {
 	height: 100% !important;
 }
+body {
+	background-color: #f3f2da;
+}
+.body-height {
+	min-height: calc(100vh - 112px);
+	display: flex;
+	flex-direction: column;
+}
 a {
 	text-decoration: none;
 	background-color: transparent;
@@ -11,4 +19,21 @@ pre {
 	font-size: 1rem !important;
 	color: #788487;
 	white-space: pre-wrap;
+}
+.color-primary {
+	color: #f3f2da;
+}
+.color-secondary {
+	color: #4e8d7c;
+}
+.color-tertiary {
+	color: #045762;
+}
+.btn-tertiary {
+	background-color: #045762;
+	color: #f3f2da;
+}
+.btn-tertiary:hover {
+	background-color: #4e8d7c;
+	color: #f3f2da;
 }

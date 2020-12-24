@@ -1,11 +1,11 @@
 <template>
-	<div>
+	<div class="body-height justify-content-center">
 		<ModalPost :post="{...post}" :toggleModal="toggleModal" :show="show" mode="Edit" @save="updatePost" modal="Edit" />
 
-		<div class="container-sm col-lg-8 p-5 mb-5">
+		<div class="container col-lg-8 bg my-5">
 			<PostShow :post="post" :toggleModal="toggleModal" @remove="deletePost" />
 
-			<div class="comments-area my-5">
+			<div class="comments-area">
 				<h5 class="comments-title">
 					{{ post.comments.length }} 
 					<span v-if="post.comments.length > 0">Comments</span>
@@ -23,15 +23,13 @@
 						@remove="deleteComment" />					
 				</div>
 
-				<div class="comment-respond">
-					<h5 class="comment-reply-title">Leave a comment</h5>
-					
+				<div class="comment-respond">					
 					<form class="comment-form row" @submit.prevent="addComment">
 						<div class="form-group col-md-12">
-							<textarea class="form-control" rows="3" placeholder="Comment..." v-model="form_comment.text"></textarea>
+							<textarea class="form-control" rows="1" placeholder="Leave a comment..." v-model="form_comment.text"></textarea>
 						</div>
 						<div class="form-submit col-md-12 mt-3">
-							<button class="btn btn-dark" type="submit">Save</button>
+							<button class="btn btn-tertiary" type="submit">Save</button>
 						</div>
 					</form>
 				</div>
@@ -172,16 +170,36 @@ export default {
 </script>
 
 <style scoped>
+.bg {
+	background-color: #fff;
+	padding: 2rem;
+	border: 1px solid #045762;
+	border-radius: 10px;
+}
 /* comment */
 .comment {
-	border: 1px solid #f0f0f0;
-	border-radius: 5px;
+	border: 1px solid #045762;
+	border-radius: 10px;
 	padding: 10px 0 10px 15px;
 	margin: 10px 0;
 }
+.comments-area {
+	margin-top: 30px;
+}
 .comment-respond {
-	margin-top: 25px;
-	border-top: 1px solid #f0f0f0;
-	padding-top: 15px;
+	margin-top: 30px;
+	border-top: 1px solid #045762;
+	padding-top: 30px;
+}
+.form-control {
+	border: 1px solid #045762;
+	border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+  .bg {
+		max-width: 90%;
+		padding: 1rem;
+	}
 }
 </style>

@@ -58,9 +58,10 @@ export default {
 
 <style scoped>
 .post {
-	border: 1px solid #c0bfbf;
+	border: 1px solid #045762;
 	border-radius: 10px;
 	padding: 10px;
 	margin: 15px 0;
+	background-color: #fff;
 }
 </style>

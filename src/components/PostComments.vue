@@ -8,7 +8,7 @@
 
 						<div v-if="currentUser.id === comment.user._id" class="dropdown px-2">
 							<span type="button" class="tooltip-test" title="Options" :id="`dropdown_${comment._id}`" data-bs-toggle="dropdown" aria-expanded="false">
-								<i class="fas fa-ellipsis-v"></i>
+								<i class="fas fa-ellipsis-v color-tertiary"></i>
 							</span>
 							<ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" :aria-labelledby="`dropdown_${comment._id}`">
 								<li><button class="dropdown-item" @click.prevent="update">Edit</button></li>
@@ -32,7 +32,7 @@
 						<div class="form-submit col-md-12 mt-3">
 							<div class="flex">
 								<button class="btn btn-danger" @click.prevent="cancel">Cancel</button>
-								<button class="btn btn-dark" type="submit">Save</button>
+								<button class="btn btn-tertiary" type="submit">Save</button>
 							</div>
 						</div>
 					</form>
@@ -110,15 +110,15 @@ export default {
 	position: relative;
 }
 .comment-meta {
-	margin: 0 0 15px;
+	margin: 0 0 10px;
 }
 .comment-meta-author {
-	color: #788487;
-	opacity: .6;
+	color: gray;
 	font-size: 90%;
 }
 .comment-meta-author span a {
 	opacity: 1;
+	color: #045762;
 }
 .comment-meta-author span a:hover {
 	color: #000;
@@ -129,6 +129,7 @@ export default {
 .comment-content > pre {
 	padding: 0;
 	margin: 0;
+	color: #000;
 }
 .comment-form {
 	padding-right: 15px;
@@ -141,10 +142,22 @@ export default {
 	border-radius: 50%;
 }
 .fas:hover {
-	background-color: #e2e2e2;
+	background-color: #4e8d7c;
 }
 .dropdown-menu {
 	min-width: auto;
+}
+.dropdown-menu {
+	min-width: auto;
+	border: 1px solid #045762;
+	background-color: #045762;
+}
+.dropdown-item {
+	color:  #f3f2f2;
+}
+.dropdown-item:hover,
+.dropdown-item:focus {
+	background-color: #4e8d7c;
 }
 
 .flex {

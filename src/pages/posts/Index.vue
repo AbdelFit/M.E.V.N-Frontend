@@ -1,5 +1,5 @@
 <template>
-	<div class="container-sm col-lg-8">
+	<div class="container-sm col-lg-8 body-height">
 		<ModalPost :post="postModal" :toggleModal="toggleModal" :show="show" @save="savePost" :mode="mode" />
 
 		<Create class="mt-5" @openModal="openModal" />
@@ -92,9 +92,10 @@ export default {
 
 <style scoped>
 .post {
-	border: 1px solid #c0bfbf;
+	border: 1px solid #045762;
 	border-radius: 10px;
 	padding: 10px;
 	margin: 15px 0;
+	background-color: #fff;
 }
 </style>

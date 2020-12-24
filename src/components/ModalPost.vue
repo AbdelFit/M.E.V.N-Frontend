@@ -28,7 +28,7 @@
 
 						<div class="modal-footer">
 							<button type="button" class="btn btn-danger" @click="toggleModal">Close</button>
-							<button type="submit" class="btn btn-dark">Save</button>
+							<button type="submit" class="btn btn-tertiary">Save</button>
 						</div>
 					</form>
 				</ValidationObserver>
@@ -76,23 +76,27 @@ export default {
 	background-color: rgba(62, 62, 63, 0.5);
 }
 .modal-content {
-	background-color: #3E3E3F;
-	color: #fff;
+	background-color: #fff;
+	color: #045762;
+	box-shadow: 5px 5px 5px 5px grey;
 }
 .modal-header {
-	border-bottom-color: #060606;
+	border-bottom-color: #045762;
 	display: inline-block;
 }
 .form-control {
-	background-color: #6a6b6b;
-	color: #fff;
+	background-color: #f3f2da;
+	color: #000;
 }
 .form-control::placeholder {
 	color: rgba(219, 219, 219, 0.534);
 }
 .modal-footer {
 	justify-content: space-between;
-	border-top-color: #060606;
+	border-top-color: #045762;
+}
+label {
+	font-size: larger;
 }
 
 /* textarea scrollbar */

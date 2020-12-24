@@ -58,7 +58,7 @@
 
 				<div class="flex mt-4" v-if="form_show.username || form_show.bio || form_show.password">
 					<button class="btn btn-danger" @click="cancel">Cancel</button>
-					<button class="btn btn-dark" type="submit">Save</button>
+					<button class="btn btn-tertiary" type="submit">Save</button>
 				</div>
 			</form>
 		</ValidationObserver>
@@ -126,5 +126,13 @@ export default {
 	justify-content: space-between;
 	align-self: center;
 	align-items: center;
+}
+.form-check-input:hover {
+	background-color: #4e8d7c;
+	border-color: #4e8d7c;
+}
+.form-check-input:checked {
+	background-color: #045762;
+	border-color: #045762;
 }
 </style>

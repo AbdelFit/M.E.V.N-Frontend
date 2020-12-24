@@ -2,7 +2,7 @@
 	<div class="container-sm mt-5 col-lg-8">
 		<div class="flex" v-if="!loading">
 			<div class="sidebar">
-				<div class="user-header border-bottom">
+				<div class="user-header">
 					<span class="user-circle">{{ symbole }}</span>
 				</div>
 				<div class="user-content mt-4">
@@ -12,7 +12,7 @@
 						<pre>{{ user.bio }}</pre>
 					</div>
 
-					<div class="user-flex border-top mt-3 p-1">
+					<div class="user-flex mt-3 p-1">
 						<p @click="mode = 'posts'" class="tooltip-test" title="Posts">{{ user.posts.length }} posts</p>
 						<p @click="mode = 'comments'" class="tooltip-test" title="Comments">{{ user.comments.length }} comments</p>
 					</div>
@@ -26,7 +26,7 @@
 					<span @click="mode = 'edit'" :class="[ mode == 'edit' ? 'active' : '' ]" class="tooltip-test" title="Update Profile" v-if="currentUser.id == user._id"><i class="fas fa-user-edit"></i></span>
 				</div>
 
-				<div class="content mt-3">
+				<div class="content my-3">
 					<ProfilePosts v-if="mode === 'posts'" :user="user" @savePost="savePost" @deletePost="deletePost" />
 					<ProfileComments v-if="mode === 'comments'" :user="user" :done="done" @updateComment="updateComment" @deleteComment="deleteComment" />
 					<ProfileEdit v-if="mode === 'edit'" :user="user" :authError="authError" @update="updateProfile" />
@@ -183,9 +183,9 @@ export default {
 	justify-content: space-between;
 }
 .sidebar {
-	border: 1px solid #c0bfbf;
+	border: 1px solid #045762;
 	border-radius: 15px;
-	background-color: #c9c9c9;
+	background-color: #fff;
 	padding: 10px 15px;
 	margin: 15px;
 	min-width: 150px;
@@ -201,42 +201,39 @@ export default {
 	justify-content: center;
 	margin-bottom: 10px;
 	padding: 10px 0;
+	border-bottom: 1px solid #045762;
 }
 .user-circle {
 	padding: 13px 20px;
 	text-transform: uppercase;
-	border: 1px solid #c0bfbf;
+	border: 1px solid #045762;
 	border-radius: 50%;
-	background-color: #fff;
-}
-.user-content .flex-content > p {
-	margin: 0;
-}
-.user-content .flex-content {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
+	background-color: #045762;
+	color: #fff;
 }
 .user-bio {
 	margin: 15px 0;
-	background-color: #fff;
+	background-color: #045762;
 	border-radius: 15px;
-	padding: 3px 5px;
+	padding: 8px;
 }
 .user-bio > pre {
 	margin: 0;
+	color: #fff;
 }
 .user-flex {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	border-top: 1px solid #045762;
 }
 .user-flex > p {
 	margin: 0;
 	cursor: pointer;
+	color: #000;
 }
 .user-flex > p:hover {
-	color: #979595;
+	color: #045762;
 }
 
 .bar {
@@ -251,35 +248,45 @@ export default {
 	padding: 10px;
 	margin-bottom: 10px;
 	text-align: center;
-	border-bottom: 1px solid#c0bfbf;
+	border-bottom: 1px solid#045762;
 }
 .flex-bar > span {
-	color: #000;
+	color: #045762;
 	cursor: pointer;
 }
 .flex-bar > span:hover {
-	color: #979595;
+	color: #000;
 }
 .flex-bar > span > i {
 	font-size: xx-large;
 }
 
 .active {
-	color: #979595 !important;
+	color: #000 !important;
 }
 
 /* Responsive layout - makes a one column layout instead of a two-column layout */
-@media (max-width: 800px) {
+@media (max-width: 540px) {
 	.sidebar {
 		align-self: center;
 		flex-basis: auto;
-		width: 270px;
+		width: 50%;
 	}
   .flex {
 		flex-direction: column;
 	}
 	.user-content {
 		text-align: center;
+	}
+}
+@media (max-width: 414px) {
+	.sidebar {
+		width: 68%;
+	}
+}
+@media (max-width: 280px) {
+	.sidebar {
+		width: 90%;
 	}
 }
 </style>

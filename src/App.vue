@@ -1,8 +1,8 @@
 <template>
-  <div id="app">
+  <div id="app" class="view-height">
 		<HeaderApp />
 
-		<div>
+		<div class="body-height">
 			<ToastMsg :msg="toastMsg" />
 
 			<router-view></router-view>
@@ -38,4 +38,10 @@ export default {
 <style>
 @import url("./assets/styles/custom.css");
 @import url("https://pro.fontawesome.com/releases/v5.10.0/css/all.css");
+</style>
+
+<style scoped>
+.view-height {
+	min-height: 100vh;
+}
 </style>

@@ -1,5 +1,5 @@
 <template>
-	<div v-if="msg" :class="{ show: msg }" class="toast d-flex align-items-center top-end text-white" role="alert" aria-live="assertive" aria-atomic="true" >
+	<div v-if="msg" :class="{ show: msg }" class="toast d-flex align-items-center top-end" role="alert" aria-live="assertive" aria-atomic="true" >
 		<div class="toast-body">
 			{{ msg }}
 		</div>
@@ -53,8 +53,9 @@ export default {
 .top-end {
 	right: 0;
 	top: 104px;
-	background-color: #0021bf8c;
+	background-color: #045762;
 	position: fixed;
+	color: #f3f2da;
 }
 
 /* Responsive layout - makes a one column layout instead of a two-column layout */

@@ -8,7 +8,7 @@
 				
 				<ValidationProvider name="auth" rules="required" v-slot="{ errors }">
 					<div class="mb-3">
-						<label for="name">Email Address or Username*</label>
+						<label class="color-secondary" for="name">Email Address or Username*</label>
 						<input class="form-control" v-model="form.auth" type="text" placeholder="Email Address or username" />
 						<small class="text-sm text-danger font-italic">{{ errors[0] }}</small>
 					</div>
@@ -16,14 +16,14 @@
 
 				<ValidationProvider name="password" rules="required|min:8" v-slot="{ errors }">
 					<div class="mb-3">
-						<label for="name">Password*</label>
+						<label class="color-secondary" for="name">Password*</label>
 						<input class="form-control" v-model="form.password" type="password" placeholder="Password should be at least 8 characters" />
 						<small class="text-sm text-danger font-italic">{{ errors[0] }}</small>
 					</div>
 				</ValidationProvider>
 
 				<div>
-					<button class="btn btn-primary" type="submit">
+					<button class="btn btn-tertiary" type="submit">
 						submit
 					</button>
 				</div>
